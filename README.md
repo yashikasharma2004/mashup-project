@@ -8,6 +8,7 @@
 **MASHUP PRO** is a powerful web-based service that allows users to create custom audio mashups of their favorite singers. By simply providing a singer's name, the number of tracks, and a specific duration, the application automates the process of fetching, trimming, and merging audio files.
 
 ---
+<img width="912" height="888" alt="image" src="https://github.com/user-attachments/assets/2a08bf0e-7b41-4630-8c6c-37b6aeb18963" />
 
 ## 🚀 Live Demo
 Experience the magic here: **[Mashup Pro Live on Render](https://mashup-project-xq17.onrender.com)**
