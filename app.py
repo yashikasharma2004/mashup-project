@@ -1,3 +1,6 @@
+import static_ffmpeg
+static_ffmpeg.add_paths()
+
 from flask import Flask, render_template, request
 import subprocess
 import smtplib
@@ -50,3 +53,4 @@ def process():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
