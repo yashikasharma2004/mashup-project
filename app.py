@@ -45,5 +45,8 @@ def process():
     else:
         return "<h1>Error!</h1><p>Mashup generation failed. Check terminal for errors.</p>"
 
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
