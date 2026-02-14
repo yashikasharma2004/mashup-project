@@ -1,24 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mashup Web Service - 102317089</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhakaas Mashup | 102317089</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #0f0c29;
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        /* Animated Circles for Background */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: move 10s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(0, 0); }
+            to { transform: translate(100px, 100px); }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            padding: 40px;
+            width: 100%;
+            max-width: 480px;
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .header-icon {
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        h2 { font-weight: 700; color: #fff; text-align: center; margin-bottom: 5px; letter-spacing: 1px; }
+        .sub { text-align: center; color: #aaa; font-size: 0.9rem; margin-bottom: 30px; }
+
+        .form-label { color: #eee; font-weight: 500; font-size: 0.85rem; margin-left: 5px; }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.3);
+            color: #fff;
+        }
+
+        .btn-jhakaas {
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            color: #fff;
+            font-weight: 700;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-jhakaas:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(255, 0, 204, 0.4);
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            text-align: center;
+            color: #888;
+            font-size: 0.75rem;
+        }
+    </style>
 </head>
 <body>
-    <h2>Mashup Generator</h2>
+
+<div class="circle" style="width: 300px; height: 300px; top: -50px; left: -50px;"></div>
+<div class="circle" style="width: 250px; height: 250px; bottom: -50px; right: -50px; background: #00d2ff;"></div>
+
+<div class="card">
+    <span class="header-icon">🎧</span>
+    <h2>MASHUP PRO</h2>
+    <p class="sub">High-Quality Audio Mashup Generator</p>
+
     <form action="/process" method="post">
-        <label>Singer Name:</label><br>
-        <input type="text" name="singer" required><br><br>
-        
-        <label>Number of Videos (must be > 10):</label><br>
-        <input type="number" name="num_videos" min="11" required><br><br>
-        
-        <label>Duration per video (must be > 20 sec):</label><br>
-        <input type="number" name="duration" min="21" required><br><br>
-        
-        <label>Email ID:</label><br>
-        <input type="email" name="email" required><br><br>
-        
-        <button type="submit">Submit and Send Email</button>
+        <label class="form-label">Search Singer</label>
+        <input type="text" class="form-control" name="singer" placeholder="Arijit Singh, Diljit, etc." required>
+
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label">Total Videos (>10)</label>
+                <input type="number" class="form-control" name="num_videos" min="11" placeholder="11" required>
+            </div>
+            <div class="col-6">
+                <label class="form-label">Duration (>20s)</label>
+                <input type="number" class="form-control" name="duration" min="21" placeholder="21" required>
+            </div>
+        </div>
+
+        <label class="form-label">Your Email</label>
+        <input type="email" class="form-control" name="email" placeholder="name@email.com" required>
+
+        <button type="submit" class="btn-jhakaas">Magic Generate ✨</button>
     </form>
+
+    <div class="footer-text">
+        <strong>Roll No: 102317089</strong><br>
+        B.Tech CSE | Render Live Hosting
+    </div>
+</div>
+
 </body>
 </html>
