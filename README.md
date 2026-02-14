@@ -13,6 +13,9 @@
 ## 🚀 Live Demo
 Experience the magic here: **[Mashup Pro Live on Render](https://mashup-project-xq17.onrender.com)**
 
+<img width="1918" height="489" alt="image" src="https://github.com/user-attachments/assets/16f37e2d-8de9-48a5-ac6d-144988441a92" />
+
+
 ---
 
 ## ✨ Key Features
