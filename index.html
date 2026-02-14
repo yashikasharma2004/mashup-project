@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mashup Web Service - 102317089</title>
+</head>
+<body>
+    <h2>Mashup Generator</h2>
+    <form action="/process" method="post">
+        <label>Singer Name:</label><br>
+        <input type="text" name="singer" required><br><br>
+        
+        <label>Number of Videos (must be > 10):</label><br>
+        <input type="number" name="num_videos" min="11" required><br><br>
+        
+        <label>Duration per video (must be > 20 sec):</label><br>
+        <input type="number" name="duration" min="21" required><br><br>
+        
+        <label>Email ID:</label><br>
+        <input type="email" name="email" required><br><br>
+        
+        <button type="submit">Submit and Send Email</button>
+    </form>
+</body>
+</html>
